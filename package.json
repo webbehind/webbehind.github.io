@@ -25,6 +25,7 @@
   "dependencies": {
     "express": "^4.13.4",
     "express-react-views": "^0.10.0",
+    "glob": "^7.0.3",
     "react": "^0.14.7",
     "react-dom": "^0.14.7"
   }

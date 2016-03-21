@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   title: "Episode 1 – Mikeal Rogers",
   date: "January 17, 2016",
   author: "Jon Kuperman",
