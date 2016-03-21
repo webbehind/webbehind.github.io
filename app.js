@@ -10,7 +10,7 @@ app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 
 app.get('/', function(req, res) {
-  res.send('Hello World!')
+  res.render('index', { name: 'John' })
 })
 
 app.listen(3000, function() {
