@@ -5,14 +5,18 @@ var App = React.createClass({
     var entries = []
     this.props.episodes.map((episode) => {
       entries.push(
-        <div>
-          <div>Hello {episode.title}</div>
-          <div>{episode.date}</div>
-          <div>{episode.author}</div>
+        <article>
+          <h1>Hello {episode.title}</h1>
+          <span>{episode.date}</span>
+          <span>{episode.author}</span>
           <div>{episode.excerpt}</div>
-          <div>{episode.embed}</div>
+          <iframe width='100%' height='166' scrolling='no' frameBorder='no' src={episode.embed}></iframe>
           <div>{episode.content}</div>
-        </div>
+          <h2>Show Notes:</h2>
+          <ul>
+            <li>{episode.notes}</li>
+          </ul>
+        </article>
       )
     })
 
