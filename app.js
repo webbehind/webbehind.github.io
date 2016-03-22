@@ -1,5 +1,6 @@
 var express = require('express')
 var app = express()
+var episodes = require('./episodes/index')
 
 // Static assets go in resources folder
 app.use(express.static('resources'))
@@ -10,7 +11,7 @@ app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 
 app.get('/', function(req, res) {
-  res.render('index', { name: 'John' })
+  res.render('index', { episodes: episodes })
 })
 
 app.listen(3000, function() {

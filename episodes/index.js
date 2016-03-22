@@ -1,4 +1,4 @@
-var path = require('path')
+var path = require("path")
 var glob = require("glob")
 
 // Create a list of all folders that have index.js files
@@ -7,6 +7,4 @@ var episodeList = glob.sync(
   {ignore: __filename}
 )
 
-var episodeMeta = episodeList.map( s => require(s))
-
-console.log(foo)
+module.exports = episodeList.map( s => require(s))
